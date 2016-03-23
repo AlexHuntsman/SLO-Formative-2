@@ -29,4 +29,9 @@ public class RPSFrame extends JFrame
 	{
 		return baseController;
 	}
+
+	public RPSPanel getBasePanel() {
+		return basePanel;
+	}
+	
 }

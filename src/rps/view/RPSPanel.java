@@ -22,7 +22,6 @@ public class RPSPanel extends JPanel
 	private JLabel modeLabel;
 	private String player1;
 	private String player2;
-	private boolean quit;
 	
 	
 	public RPSPanel(RPSController baseController)
@@ -189,7 +188,7 @@ public class RPSPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				quit = true;
+				System.exit(0);
 			}
 		});
 		
@@ -197,7 +196,10 @@ public class RPSPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				winArea.setText(baseController.gameRunner());
+				winArea.append(("\n" + baseController.gameRunner()));
+				player1 = "";
+				player2 = "";
+				
 			}
 		});
 		
@@ -324,10 +326,6 @@ public class RPSPanel extends JPanel
 	{
 		this.player2 = player2;
 	}
-	public boolean getQuit()
-	{
-		return quit;
-	}
-	
+
 	
 }

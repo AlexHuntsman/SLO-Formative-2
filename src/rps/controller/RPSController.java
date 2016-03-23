@@ -20,29 +20,27 @@ public class RPSController
 		
 	}
 	
-	private void shutDown()
-	{
-		System.exit(0);
-	}
 	
 	public String gameRunner()
 	{
-		String results = "I broke";
-		if(myPanel.getModeLabel().getText().equals("Singleplayer"))
+		//if they submit without picking
+		String results = "You did not pick";
+		//if in singleplayer mode
+		if(myFrame.getBasePanel().getModeLabel().getText().equals("Singleplayer"))
 		{
 			if(myRPS.processChoise().equals("rock"))
 			{
-				if(myPanel.getPlayer1().equals("rock"))
+				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "tie";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("paper"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "Player1 wins";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("scissors"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "I win";
 					return results;
@@ -50,17 +48,17 @@ public class RPSController
 			}
 			else if(myRPS.processChoise().equals("paper"))
 			{
-				if(myPanel.getPlayer1().equals("rock"))
+				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "I win";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("paper"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "Tie";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("scissors"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "Player1 wins";
 					return results;
@@ -68,74 +66,75 @@ public class RPSController
 			}
 			else if(myRPS.processChoise().equals("scissors"))
 			{
-				if(myPanel.getPlayer1().equals("rock"))
+				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "Player1 wins";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("paper"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "I win";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("scissors"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "tie";
 					return results;
 				}
 			}
 		}
+		//if in multiplayer mode
 		else
 		{
-			if(myPanel.getPlayer2().equals("rock"))
+			if(myFrame.getBasePanel().getPlayer2().equals("rock"))
 			{
-				if(myPanel.getPlayer1().equals("rock"))
+				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "tie";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("paper"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "Player1 wins";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("scissors"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
-					results = "I win";
+					results = "Player2 wins";
 					return results;
 				}
 			}
-			else if(myPanel.getPlayer2().equals("paper"))
+			else if(myFrame.getBasePanel().getPlayer2().equals("paper"))
 			{
-				if(myPanel.getPlayer1().equals("rock"))
+				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
-					results = "I win";
+					results = "Player2 wins";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("paper"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "Tie";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("scissors"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "Player1 wins";
 					return results;
 				}
 			}
-			else if(myPanel.getPlayer2().equals("scissors"))
+			else if(myFrame.getBasePanel().getPlayer2().equals("scissors"))
 			{
-				if(myPanel.getPlayer1().equals("rock"))
+				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "Player1 wins";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("paper"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
-					results = "I win";
+					results = "Player2 wins";
 					return results;
 				}
-				else if(myPanel.getPlayer1().equals("scissors"))
+				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "tie";
 					return results;
