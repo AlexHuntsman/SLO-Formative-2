@@ -34,9 +34,8 @@ public class RPSPanel extends JPanel
 		scissorsButton = new JButton("Scissors");
 		modeButton = new JButton("Change your mode");
 		submitButton = new JButton("See the outcome");
-		quitButton = new JButton("Quit");
+		quitButton = new JButton("Quit");	
 		winArea = new JTextArea(10, 30);
-
 		player1 = "";
 		player2 = "";
 		
@@ -51,26 +50,29 @@ public class RPSPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.NORTH, winArea, 10, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.WEST, winArea, 50, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.EAST, winArea, -50, SpringLayout.EAST, this);
-		baseLayout.putConstraint(SpringLayout.NORTH, quitButton, 0, SpringLayout.NORTH, modeButton);
-		baseLayout.putConstraint(SpringLayout.EAST, quitButton, -23, SpringLayout.EAST, this);
-		baseLayout.putConstraint(SpringLayout.NORTH, submitButton, 199, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.WEST, modeButton, 20, SpringLayout.EAST, modeLabel);
-		baseLayout.putConstraint(SpringLayout.NORTH, modeButton, 250, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.SOUTH, paperButton, -22, SpringLayout.NORTH, modeButton);
-		baseLayout.putConstraint(SpringLayout.NORTH, scissorsButton, 0, SpringLayout.NORTH, rockButton);
-		baseLayout.putConstraint(SpringLayout.WEST, scissorsButton, 6, SpringLayout.EAST, paperButton);
-		baseLayout.putConstraint(SpringLayout.WEST, paperButton, 6, SpringLayout.EAST, rockButton);
-		baseLayout.putConstraint(SpringLayout.WEST, rockButton, 174, SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.SOUTH, rockButton, -72, SpringLayout.SOUTH, this);
 		baseLayout.putConstraint(SpringLayout.NORTH, modeLabel, 255, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.WEST, modeLabel, 10, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, paperButton, 0, SpringLayout.NORTH, rockButton);
+		baseLayout.putConstraint(SpringLayout.NORTH, scissorsButton, 0, SpringLayout.NORTH, rockButton);
+		baseLayout.putConstraint(SpringLayout.EAST, paperButton, 0, SpringLayout.EAST, modeButton);
+		baseLayout.putConstraint(SpringLayout.NORTH, modeButton, -5, SpringLayout.NORTH, modeLabel);
+		baseLayout.putConstraint(SpringLayout.NORTH, rockButton, 6, SpringLayout.SOUTH, submitButton);
+		baseLayout.putConstraint(SpringLayout.WEST, modeButton, 6, SpringLayout.EAST, modeLabel);
+		baseLayout.putConstraint(SpringLayout.WEST, submitButton, 10, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, quitButton, 0, SpringLayout.NORTH, modeButton);
 		
+		baseLayout.putConstraint(SpringLayout.EAST, quitButton, 0, SpringLayout.EAST, textPane);
+		baseLayout.putConstraint(SpringLayout.EAST, scissorsButton, 0, SpringLayout.EAST, textPane);
+		baseLayout.putConstraint(SpringLayout.WEST, rockButton, 0, SpringLayout.WEST, textPane);
+		baseLayout.putConstraint(SpringLayout.NORTH, submitButton, 2, SpringLayout.SOUTH, textPane);
+		baseLayout.putConstraint(SpringLayout.WEST, textPane, 50, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.EAST, textPane, -50, SpringLayout.EAST, this);
 	}
 	
 	private void setupRPSPane()
 	{
 		textPane = new JScrollPane(winArea);
-		baseLayout.putConstraint(SpringLayout.WEST, submitButton, 0, SpringLayout.WEST, textPane);
+
 		winArea.setLineWrap(true);
 		winArea.setWrapStyleWord(true);
 		winArea.setEditable(false);

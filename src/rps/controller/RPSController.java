@@ -33,17 +33,17 @@ public class RPSController
 				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "tie";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "Player1 wins";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "I win";
-					return results;
+					
 				}
 			}
 			else if(myRPS.processChoise().equals("paper"))
@@ -51,17 +51,17 @@ public class RPSController
 				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "I win";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "Tie";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "Player1 wins";
-					return results;
+					
 				}
 			}
 			else if(myRPS.processChoise().equals("scissors"))
@@ -69,17 +69,17 @@ public class RPSController
 				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "Player1 wins";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "I win";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "tie";
-					return results;
+					
 				}
 			}
 		}
@@ -91,17 +91,17 @@ public class RPSController
 				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "tie";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "Player1 wins";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "Player2 wins";
-					return results;
+					
 				}
 			}
 			else if(myFrame.getBasePanel().getPlayer2().equals("paper"))
@@ -109,17 +109,17 @@ public class RPSController
 				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "Player2 wins";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "Tie";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "Player1 wins";
-					return results;
+					
 				}
 			}
 			else if(myFrame.getBasePanel().getPlayer2().equals("scissors"))
@@ -127,17 +127,17 @@ public class RPSController
 				if(myFrame.getBasePanel().getPlayer1().equals("rock"))
 				{
 					results = "Player1 wins";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("paper"))
 				{
 					results = "Player2 wins";
-					return results;
+					
 				}
 				else if(myFrame.getBasePanel().getPlayer1().equals("scissors"))
 				{
 					results = "tie";
-					return results;
+					
 				}
 			}
 		}
